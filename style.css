@@ -1,0 +1,8 @@
+body {
+  background-color: cornflowerblue;
+}
+
+h1, p {
+  font-family: 'Arial';
+  color: white;
+}
