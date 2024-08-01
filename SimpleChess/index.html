@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Simple Chess</title>
+  <link rel="icon" href="./assets/pieces/wP.svg">
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link href="generic-style.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="navbar">
+    <a href="./">Home</a>
+    <a href="./about/">About</a>
+    <a href="./how-to-play/">How to Play</a>
+    <a href="./other/">Other Pages</a>
+  </div>
+  <div class="title-section">
+    <h1>Simple Chess</h1>
+    <h3><em>A simple interface for playing chess locally</em></h3>
+  </div>
+  <div id="board-container">
+    <img src="assets/boards/green.svg" id="board" draggable="false">
+  </div>
+  <div class="score-section">
+    <h4 id="white-score" class="score"></h4>
+    <h4 id="black-score" class="score"></h4>
+  </div>
+  <div class="generic-section" id="settings-menu">
+    <h2>Settings</h2>
+    <h3>Score Adjustment</h3>
+    <button onclick="addWhiteWin();updateScores()">Add White Win</button>
+    <button onclick="addBlackWin();updateScores()">Add Black Win</button>
+    <button onclick="addDraw();updateScores()">Add Draw</button>
+    <button onclick="resetScores();updateScores()">Reset Score</button>
+    <h3>Manual Piece Removal</h3>
+    <button onclick="togglePieceRemoveMode()" id="piece-remove-toggle">Turn Piece Removal On</button>
+    <h3>Board Adjustments</h3>
+    <button onclick="flipBoard()">Flip Board (f)</button>
+    <button onclick="resetBoard()">Reset Board</button>
+  </div>
+  <a href="#settings-toggle" onclick="toggleSettings()" id="settings-toggle">(Hide Settings)</a>
+  <div class="generic-section" id="chess-description">
+    <h2>Chess</h2>
+    <div class="text-container">
+      <p>For centuries, the game of chess has captivated the minds of logical thinkers, young and old alike. Being one of the most widespread games in the world, chess acts almost as a universal language. Simply being able to play chess can allow a person to engage with people from anywhere across the globe. This is especially true with the recent boom in chess popularity fueled by the COVID-19 pandemic. Every year, more and more people are getting into chess. Some after a long hiatus, and some for the first time. There has never, in the entire history of chess, been a better time to start playing than right now. So grab a friend, learn the rules, and start playing chess!</p>
+    </div>
+  </div>
+  <a href="#description-toggle" onclick="toggleDescription()" id="description-toggle">(Hide Description)</a>
+  <script src="script.js"></script>
+  <script src="score.js"></script>
+</body>
+</html>
